@@ -28,9 +28,10 @@
 {% for st in schoolobj.students.all %}
 <h1>name of the student is {{st.Stname}}</h1>
 <h1>age of student is {{st.Stage}}</h1>
+
 {% endfor %}
 
-
+<a href="{% url 'update' pk=schoolobj.pk %}" class="btn btn-primary">Update</a></h1>
 {% endblock %}
 
 

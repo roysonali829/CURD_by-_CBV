@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        <title>Document</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+</head>
+  <body>
+    <center>
+    <nav class="nav" style="background-color: black">
+        <a href="{% url 'admin:index' %}" class="nav-link">Admin Page</a>
+        <a href="{% url 'Home' %}" class="nav-link">Home Page</a>
+        <a href="{% url 'Schoollist' %}" class="nav-link">Schoollist</a>
+        
+    </nav>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/mdb.js' %}"></script>
+    {% block body_block %}
+
+    {% endblock %}
+</center>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+
+{% extends 'app/dummy.html' %}
+{% load static %}
+{% block title %}
+    <title>delete</title>
+{% endblock %}
+
+{% block body_block %}
+
+<!-- <img src="{% static 'images/images.jpg' %}" width="500px"> -->
+<h1>delete the details of {{schooldetails.Sname}}</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes-Delete" class="btn btn-primary">
+</form>
+
+<h1><a href="{% url 'Schoollist' %}">No Take me back to list page</a></h1>
+
+
+<h1><a href="{% url 'detail' pk=schoolobject.pk %}">No take me back to Detail</a></h1>
+{% endblock %}
+
+

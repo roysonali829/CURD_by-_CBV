@@ -32,6 +32,8 @@
 {% endfor %}
 
 <a href="{% url 'update' pk=schoolobj.pk %}" class="btn btn-primary">Update</a></h1>
+<a href="{% url 'delete' pk=schoolobj.pk %}" class="btn btn-primary">Delete</a></h1>
+
 {% endblock %}
 
 
